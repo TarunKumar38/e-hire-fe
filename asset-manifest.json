@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/e-hire-fe/static/css/main.190ea25c.chunk.css",
+    "main.js": "/e-hire-fe/static/js/main.a0459530.chunk.js",
+    "main.js.map": "/e-hire-fe/static/js/main.a0459530.chunk.js.map",
+    "runtime-main.js": "/e-hire-fe/static/js/runtime-main.aa002e6c.js",
+    "runtime-main.js.map": "/e-hire-fe/static/js/runtime-main.aa002e6c.js.map",
+    "static/js/2.71be56d8.chunk.js": "/e-hire-fe/static/js/2.71be56d8.chunk.js",
+    "static/js/2.71be56d8.chunk.js.map": "/e-hire-fe/static/js/2.71be56d8.chunk.js.map",
+    "static/js/3.c623c62c.chunk.js": "/e-hire-fe/static/js/3.c623c62c.chunk.js",
+    "static/js/3.c623c62c.chunk.js.map": "/e-hire-fe/static/js/3.c623c62c.chunk.js.map",
+    "index.html": "/e-hire-fe/index.html",
+    "static/css/main.190ea25c.chunk.css.map": "/e-hire-fe/static/css/main.190ea25c.chunk.css.map",
+    "static/js/2.71be56d8.chunk.js.LICENSE.txt": "/e-hire-fe/static/js/2.71be56d8.chunk.js.LICENSE.txt",
+    "static/media/62.1f5a66ba.svg": "/e-hire-fe/static/media/62.1f5a66ba.svg",
+    "static/media/productCurvyLines.58c56f77.png": "/e-hire-fe/static/media/productCurvyLines.58c56f77.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa002e6c.js",
+    "static/js/2.71be56d8.chunk.js",
+    "static/css/main.190ea25c.chunk.css",
+    "static/js/main.a0459530.chunk.js"
+  ]
+}
