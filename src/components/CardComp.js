@@ -174,7 +174,7 @@ export default function ButtonComp() {
   };
 
   const joinHandler = () => {
-    window.location.href = `/e-hire-fe/${RoomId}`;
+    window.location.href = `/${RoomId}`;
   };
 
   return (

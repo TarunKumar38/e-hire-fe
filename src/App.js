@@ -10,10 +10,10 @@ function App() {
     <div className='App'>
       <Router>
         <Switch>
-          <Route path='/e-hire-fe/home' exact>
+          <Route path='/home' exact>
             <CardComp />
           </Route>
-          <Route path='/e-hire-fe/:id' exact>
+          <Route path='/:id' exact>
             <div className='all-content video-editor'>
               <div className='main-column1 editorr'>
                 <Editor />
