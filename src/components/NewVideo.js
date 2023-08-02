@@ -41,7 +41,7 @@ const NewVideo = () => {
 
   useEffect(() => {
     // socketRef.current = io.connect("http://localhost:5000");
-    socketRef.current = io.connect("https://e-hire-be.vercel.app/");
+    socketRef.current = io.connect("https://holy-solstice-pirate.glitch.me/");
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
       .then((stream) => {

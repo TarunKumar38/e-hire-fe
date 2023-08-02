@@ -35,7 +35,7 @@ int main() {
 
   useEffect(() => {
     // socketRef.current = io.connect("http://localhost:5000");
-    socketRef.current = io.connect("https://e-hire-be.vercel.app/");
+    socketRef.current = io.connect("https://holy-solstice-pirate.glitch.me/");
 
     socketRef.current.emit("join-room", roomId);
     socketRef.current.on("codeChanged1", (code) => {

@@ -1,76 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 //NAVBAR or APPBAR
-import AppBar from "@material-ui/core/AppBar";
-import IconButton from "@material-ui/core/IconButton";
+import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
 
 //BUTTON CARD
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
-import Card from "@material-ui/core/Card";
-import Popper from "@material-ui/core/Popper";
-import ShareIcon from "@material-ui/icons/Share";
-import MenuIcon from "@material-ui/icons/Menu";
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
-import Icon from "@material-ui/icons/Send";
-import CssBaseLine from "@material-ui/core/CssBaseline";
-import "./cardcomp.css";
-import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Paper from "@material-ui/core/Paper";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Grow from '@material-ui/core/Grow';
+import Card from '@material-ui/core/Card';
+import Popper from '@material-ui/core/Popper';
+import ShareIcon from '@material-ui/icons/Share';
+import MenuIcon from '@material-ui/icons/Menu';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import Icon from '@material-ui/icons/Send';
+import CssBaseLine from '@material-ui/core/CssBaseline';
+import './cardcomp.css';
+import Container from '@material-ui/core/Container';
+import Avatar from '@material-ui/core/Avatar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Paper from '@material-ui/core/Paper';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 //CUSTOM STYLES
-import useStyles from "./HomeStyles";
-import HideOnScroll from "./HideOnScroll";
-import { Typography } from "@material-ui/core";
-import { v4 as uuidV4 } from "uuid";
-import Logo from "./62.svg";
-import backgroundFeatures from "./productCurvyLines.png";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import useStyles from './HomeStyles';
+import HideOnScroll from './HideOnScroll';
+import { Typography } from '@material-ui/core';
+import { v4 as uuidV4 } from 'uuid';
+import Logo from './62.svg';
+import backgroundFeatures from './productCurvyLines.png';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const font_header = createMuiTheme({
   typography: {
-    fontFamily: ["Texturina", "serif"].join(","),
+    fontFamily: ['Texturina', 'serif'].join(','),
   },
 });
 
 const CssTextField = withStyles({
   root: {
-    "& label.Mui-focused": {
-      color: "blue",
+    '& label.Mui-focused': {
+      color: 'blue',
     },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "green",
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'green',
     },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "blue",
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'blue',
       },
-      "&:hover fieldset": {
-        borderColor: "cyan",
+      '&:hover fieldset': {
+        borderColor: 'cyan',
       },
-      "&.Mui-focused fieldset": {
-        borderColor: "blue",
+      '&.Mui-focused fieldset': {
+        borderColor: 'blue',
       },
     },
   },
 })(TextField);
 
 // function([string1, string2],target id,[color1,color2])
-const options = ["Join a interview", "Create a session"];
+const options = ['Join a interview', 'Create a session'];
 
 export default function ButtonComp() {
   const [open, setOpen] = useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = useState(1);
-  const [RoomId, setRoomId] = useState("");
+  const [RoomId, setRoomId] = useState('');
   const classes = useStyles();
   const handleTextChange = (event) => {
     setRoomId(event.target.value);
@@ -78,21 +78,21 @@ export default function ButtonComp() {
 
   //TEXT ANIMATION
   useEffect(() => {
-    consoleText(["Collaborative", "Easy", "A bit fun"], "text", [
-      "tomato",
-      "rebeccapurple",
-      "lightblue",
+    consoleText(['Collaborative', 'Easy', 'A bit fun'], 'text', [
+      'tomato',
+      'rebeccapurple',
+      'lightblue',
     ]);
 
     function consoleText(words, id, colors) {
-      if (colors === undefined) colors = ["#fff"];
+      if (colors === undefined) colors = ['#fff'];
       var visible = true;
-      var con = document.getElementById("console");
+      var con = document.getElementById('console');
       var letterCount = 1;
       var x = 1;
       var waiting = false;
       var target = document.getElementById(id);
-      target.setAttribute("style", "color:" + colors[0]);
+      target.setAttribute('style', 'color:' + colors[0]);
       window.setInterval(function () {
         if (letterCount === 0 && waiting === false) {
           waiting = true;
@@ -103,7 +103,7 @@ export default function ButtonComp() {
             var usedWord = words.shift();
             words.push(usedWord);
             x = 1;
-            target.setAttribute("style", "color:" + colors[0]);
+            target.setAttribute('style', 'color:' + colors[0]);
             letterCount += x;
             waiting = false;
           }, 1000);
@@ -121,10 +121,10 @@ export default function ButtonComp() {
       }, 120);
       window.setInterval(function () {
         if (visible === true) {
-          con.className = "console-underscore hidden";
+          con.className = 'console-underscore hidden';
           visible = false;
         } else {
-          con.className = "console-underscore";
+          con.className = 'console-underscore';
 
           visible = true;
         }
@@ -134,29 +134,29 @@ export default function ButtonComp() {
 
   //CARD FUNCTIONING
   useEffect(() => {
-    document.getElementById("meeting_id").disabled = true;
+    document.getElementById('meeting_id').disabled = true;
   }, []);
 
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);
     if (selectedIndex === 1) {
       setRoomId(uuidV4());
-      document.getElementById("meeting_id").value = RoomId;
+      document.getElementById('meeting_id').value = RoomId;
     } else if (selectedIndex === 0) {
-      console.info("join");
+      console.info('join');
     }
   };
 
   const handleMenuItemClick = (event, index) => {
     setSelectedIndex(index);
-    setRoomId("");
-    document.getElementById("meeting_id").value = RoomId;
+    setRoomId('');
+    document.getElementById('meeting_id').value = RoomId;
     if (selectedIndex === 0) {
-      console.info("create");
-      document.getElementById("meeting_id").disabled = true;
+      console.info('create');
+      document.getElementById('meeting_id').disabled = true;
     } else if (selectedIndex === 1) {
-      console.info("join");
-      document.getElementById("meeting_id").disabled = false;
+      console.info('join');
+      document.getElementById('meeting_id').disabled = false;
     }
 
     setOpen(false);
@@ -174,7 +174,7 @@ export default function ButtonComp() {
   };
 
   const joinHandler = () => {
-    window.location.href = `/${RoomId}`;
+    window.location.href = `/e-hire-fe/${RoomId}`;
   };
 
   return (
@@ -219,7 +219,7 @@ export default function ButtonComp() {
                   container
                   xs={12}
                   md={4}
-                  style={{ justifyContent: "center", alignItems: "center" }}
+                  style={{ justifyContent: 'center', alignItems: 'center' }}
                 >
                   <Container maxWidth='xs' justify='center'>
                     <div class='console-container'>
@@ -548,7 +548,7 @@ export default function ButtonComp() {
               item
               container
               xs={12}
-              style={{ justifyContent: "center", alignItems: "center" }}
+              style={{ justifyContent: 'center', alignItems: 'center' }}
             >
               <Container maxWidth='xs' justify='center'>
                 <Card
@@ -581,8 +581,8 @@ export default function ButtonComp() {
                           className={classes.button}
                           color='primary'
                           size='medium'
-                          aria-controls={open ? "split-button-menu" : undefined}
-                          aria-expanded={open ? "true" : undefined}
+                          aria-controls={open ? 'split-button-menu' : undefined}
+                          aria-expanded={open ? 'true' : undefined}
                           aria-label='select merge strategy'
                           aria-haspopup='menu'
                           onClick={handleToggle}
@@ -602,9 +602,9 @@ export default function ButtonComp() {
                             {...TransitionProps}
                             style={{
                               transformOrigin:
-                                placement === "bottom"
-                                  ? "center top"
-                                  : "center bottom",
+                                placement === 'bottom'
+                                  ? 'center top'
+                                  : 'center bottom',
                             }}
                           >
                             <Paper
@@ -612,7 +612,7 @@ export default function ButtonComp() {
                               style={{
                                 zIndex: 1,
                                 background:
-                                  "linear-gradient(45deg, #2196f3 30%, #21cbf3 90%)",
+                                  'linear-gradient(45deg, #2196f3 30%, #21cbf3 90%)',
                               }}
                             >
                               <ClickAwayListener onClickAway={handleClose}>

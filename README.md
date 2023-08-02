@@ -1,3 +1,3 @@
 http://tarunkumar38.github.io/e-hire-fe/
 
-https://e-hire-be.vercel.app/
+https://holy-solstice-pirate.glitch.me/
