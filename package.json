@@ -48,5 +48,6 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "http://tarunkumar38.github.io/e-hire-fe"
+  "homepage": "http://tarunkumar38.github.io/e-hire-fe",
+  "proxy": "https://e-hire-be.vercel.app/"
 }
